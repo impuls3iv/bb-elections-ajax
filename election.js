@@ -1,7 +1,9 @@
 $(function(){
 
-  // Imagination!
-  $('#button').on('click', function(){
+
+
+  //list injection function
+  function injector(){
     $('#list').html('');
     $.ajax({
       url:"https://bb-election-api.herokuapp.com/",
@@ -16,6 +18,10 @@ $(function(){
                  .html(responseData.candidates[i].votes);
       };//end for loop
     }); //end of request
-  })//end of click
+  }; //end of function
+
+
+
+$('#button').on('click', injector);
 
 });
