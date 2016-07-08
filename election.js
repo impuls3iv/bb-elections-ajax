@@ -2,10 +2,13 @@ $(function(){
 
   // Imagination!
   $.ajax({
-    url:,
+    url:"https://bb-election-api.herokuapp.com/",
     method: 'get',
     data: { },
-    dataType: 'jason'
+    dataType: 'json'
+  }).done(function(responseData){
+    $('<li>').appendTo('#list').html(responseData.candidates[0].name);
+
   }); //end of request
 
 });
