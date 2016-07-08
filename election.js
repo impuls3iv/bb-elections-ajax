@@ -1,7 +1,5 @@
 $(function(){
 
-
-
   //list injection function
   function injector(){
     $('#list').html('');
@@ -21,7 +19,7 @@ $(function(){
   }; //end of function
 
 
-
-$('#button').on('click', injector);
+  $('#button').on('click', injector);
+  $(window).on('load', injector);
 
 });
